@@ -1,3 +1,8 @@
-export default function WeatherPage() {
-  return <h1>Weather Page</h1>;
+import WindComponent from "@/components/WindComponent";
+
+export default function WeatherPage({
+  params: { location },
+  searchParams: { latitude, longitude },
+}) {
+  return <WindComponent latitude={latitude} longitude={longitude} />;
 }

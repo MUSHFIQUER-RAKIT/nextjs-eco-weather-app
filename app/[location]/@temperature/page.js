@@ -1,3 +1,8 @@
-export default function TemperaturePage() {
-  return <h1>Temperature Page</h1>;
+import TemperatureComponent from "@/components/TemperatureComponent";
+
+export default function TemperaturePage({
+  params: { location },
+  searchParams: { latitude, longitude },
+}) {
+  return <TemperatureComponent latitude={latitude} longitude={longitude} />;
 }

@@ -1,3 +1,8 @@
-export default function AqiPage() {
-  return <h1>Aqi Page</h1>;
+import AQIComponent from "@/components/AQIComponent";
+
+export default function AqiPage({
+  params: { location },
+  searchParams: { latitude, longitude },
+}) {
+  return <AQIComponent latitude={latitude} longitude={longitude} />;
 }
